@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 14</title>
+</head>
+<body>
+    
+    <p class="parrafo">Parrafo 1</p>
+    <p class="parrafo">Parrafo 2</p>
+    <p class="parrafo">Parrafo 3</p>
+
+    <button id="boton" type="button">Reaparecer</button>
+
+    <script>
+        
+         let parrafos = document.getElementsByClassName("parrafo");
+
+            for (let i = 0; i < parrafos.length; i++) {
+                parrafos[i].addEventListener("click", function() {
+                    this.style.display = "none";
+                });
+            }
+
+            document.getElementById("boton").addEventListener("click", function(){
+
+                for (let i = 0; i < parrafos.length; i++) {
+                parrafos[i].style.display="block";
+            }
+            })
+
+    </script>
+
+</body>
+</html>
